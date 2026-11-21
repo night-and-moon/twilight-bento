@@ -1,0 +1,92 @@
+filters:
+  and:
+    - file.inFolder("Projects")
+    - file.ext == "md"
+properties:
+  status:
+    displayName: Status
+  domain:
+    displayName: Domain
+  due:
+    displayName: Due
+  file.mtime:
+    displayName: Updated
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - status
+      - domain
+      - due
+      - file.mtime
+    sort:
+      - property: status
+        direction: ASC
+  - type: kanban-view
+    name: Kanban
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - domain
+      - due
+    columnOrders:
+      file.file:
+        - Projects/JPD/FALL26_JPD123/Bài 4/Ngữ pháp 4.md
+        - Projects/JPD/FALL26_JPD123/Bài 4/Từ vựng 4.md
+        - Projects/JPD/FALL26_JPD123/Bài 5/Ngữ pháp 5.md
+        - Projects/JPD/FALL26_JPD123/Bài 5/Từ vựng 5.md
+        - Projects/JPD/FALL26_JPD123/Bài 6/Ngữ pháp 6.md
+        - Projects/JPD/FALL26_JPD123/Bài 6/Từ vựng 6.md
+        - Projects/JPD/FALL26_JPD123/Bài 7/Ngữ pháp 7.md
+        - Projects/JPD/FALL26_JPD123/Bài 7/Từ vựng 7.md
+        - Projects/JPD/JPD.md
+        - Projects/Projects.md
+        - Projects/Smart Home.md
+    cardOrders:
+      file.file: {}
+    columnColors:
+      file.file: {}
+  - type: calendar
+    name: Calendar
+    order:
+      - file.name
+      - status
+      - domain
+      - due
+      - file.mtime
+    startDate: note.due
+  - type: cards
+    name: Cards
+    order:
+      - file.name
+      - status
+      - domain
+      - due
+  - type: kanban-view
+    name: KanbanProjects
+    filters:
+      and:
+        - type == "project"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - domain
+      - due
+    columnOrders:
+      file.file:
+        - Projects/Smart Home.md
+        - Projects/JPD/JPD.md
+    cardOrders:
+      file.file: {}
+    columnColors:
+      file.file:
+        Projects/Smart Home.md: blue
+        Projects/JPD/JPD.md: yellow
+  - type: table
+    name: Chế độ xem

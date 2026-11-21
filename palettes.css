@@ -1,0 +1,369 @@
+/* @settings
+
+name: Twilight Bento
+id: twilight-bento
+settings:
+  - id: sk-dark-heading
+    title: Dark Mode Palettes (ITS Theme / AnuPpuccin / Blue Topaz)
+    type: heading
+    level: 2
+    collapsed: false
+  - id: sk-dark-palette
+    title: Dark Color Scheme
+    description: Choose a dark palette inspired by ITS Theme, AnuPpuccin, or Blue Topaz.
+    type: class-select
+    allowEmpty: false
+    default: sk-dark-its-dark
+    options:
+      - label: ITS Dark (ITS Theme — Midnight & Crimson)
+        value: sk-dark-its-dark
+      - label: Twilight Sunset (Dusk Indigo & Sunset Orange)
+        value: sk-dark-twilight-sunset
+      - label: Catppuccin Mocha (AnuPpuccin)
+        value: sk-dark-catppuccin-mocha
+      - label: Rosé Pine (AnuPpuccin)
+        value: sk-dark-rose-pine
+      - label: Dracula (AnuPpuccin)
+        value: sk-dark-dracula
+      - label: Tangerine Dunes (ITS Theme)
+        value: sk-dark-tangerine-dunes
+      - label: Topaz Nord (Blue Topaz)
+        value: sk-dark-topaz-nord
+      - label: Hazelnut Chocolate (Blue Topaz)
+        value: sk-dark-chocolate
+  - id: sk-light-heading
+    title: Light Mode Palettes
+    type: heading
+    level: 2
+    collapsed: false
+  - id: sk-light-palette
+    title: Light Color Scheme
+    description: Choose a light palette for reading & sketching.
+    type: class-select
+    allowEmpty: false
+    default: sk-light-fieldline
+    options:
+      - label: Fieldline Archival Paper (Default)
+        value: sk-light-fieldline
+      - label: Catppuccin Latte (AnuPpuccin)
+        value: sk-light-catppuccin-latte
+      - label: Everforest Light (AnuPpuccin)
+        value: sk-light-everforest
+      - label: Honey Milk (Blue Topaz)
+        value: sk-light-honey-milk
+      - label: School Days (ITS Theme)
+        value: sk-light-school-days
+
+*/
+
+/* ============================================================================
+ * SMARTKNOWLEDGE PALETTE OVERRIDES (13 Curated Schemes via Style Settings)
+ * ============================================================================ */
+
+/* Helper mixin-like variable mapping for Dark palettes */
+body.theme-dark.sk-dark-twilight-sunset {
+  --background-primary: #282a3a;
+  --background-primary-alt: #303244;
+  --background-secondary: #212230;
+  --background-secondary-alt: #1b1c28;
+  --background-modifier-hover: #35374c;
+  --background-modifier-border: #3f4159;
+  --background-modifier-border-hover: #565878;
+  --background-modifier-border-focus: #e88358;
+  --text-normal: #ece2da;
+  --text-muted: #a7a3b8;
+  --text-faint: #7c7991;
+  --text-accent: #f09a68;
+  --interactive-accent: #e88358;
+  --interactive-accent-hover: #f2976e;
+  --link-color: #e09ab0;
+  --h1-color: #f5bfa0;
+  --h2-color: #f2b285;
+  --h3-color: #eba365;
+  --bold-color: #f5bfa0;
+  --strong-color: #f5bfa0;
+  --em-color: #e09ab0;
+}
+
+body.theme-dark.sk-dark-catppuccin-mocha {
+  --background-primary: #1e1e2e;
+  --background-primary-alt: #262637;
+  --background-secondary: #181825;
+  --background-secondary-alt: #11111b;
+  --background-modifier-hover: #313244;
+  --background-modifier-border: #313244;
+  --background-modifier-border-hover: #45475a;
+  --background-modifier-border-focus: #cba6f7;
+  --text-normal: #cdd6f4;
+  --text-muted: #a6adc8;
+  --text-faint: #6c7086;
+  --text-accent: #cba6f7;
+  --interactive-accent: #cba6f7;
+  --interactive-accent-hover: #b4befe;
+  --link-color: #89b4fa;
+  --h1-color: #f38ba8;
+  --h2-color: #fab387;
+  --h3-color: #f9e2af;
+  --bold-color: #fab387;
+  --strong-color: #fab387;
+  --em-color: #f5c2e7;
+}
+
+body.theme-dark.sk-dark-rose-pine {
+  --background-primary: #191724;
+  --background-primary-alt: #1f1d2e;
+  --background-secondary: #151320;
+  --background-secondary-alt: #110f1a;
+  --background-modifier-hover: #26233a;
+  --background-modifier-border: #2a273f;
+  --background-modifier-border-hover: #403d52;
+  --background-modifier-border-focus: #ebbcba;
+  --text-normal: #e0def4;
+  --text-muted: #908caa;
+  --text-faint: #6e6a86;
+  --text-accent: #ebbcba;
+  --interactive-accent: #eb6f92;
+  --interactive-accent-hover: #ebbcba;
+  --link-color: #c4a7e7;
+  --h1-color: #ebbcba;
+  --h2-color: #f6c177;
+  --h3-color: #9ccfd8;
+  --bold-color: #f6c177;
+  --strong-color: #f6c177;
+  --em-color: #ebbcba;
+}
+
+body.theme-dark.sk-dark-dracula {
+  --background-primary: #282a36;
+  --background-primary-alt: #313442;
+  --background-secondary: #21222c;
+  --background-secondary-alt: #191a21;
+  --background-modifier-hover: #383a4d;
+  --background-modifier-border: #44475a;
+  --background-modifier-border-hover: #6272a4;
+  --background-modifier-border-focus: #bd93f9;
+  --text-normal: #f8f8f2;
+  --text-muted: #a4acc4;
+  --text-faint: #6272a4;
+  --text-accent: #bd93f9;
+  --interactive-accent: #bd93f9;
+  --interactive-accent-hover: #ff79c6;
+  --link-color: #8be9fd;
+  --h1-color: #ff79c6;
+  --h2-color: #bd93f9;
+  --h3-color: #ffb86c;
+  --bold-color: #ffb86c;
+  --strong-color: #ffb86c;
+  --em-color: #ff79c6;
+}
+
+body.theme-dark.sk-dark-tangerine-dunes {
+  --background-primary: #1c1917;
+  --background-primary-alt: #26211d;
+  --background-secondary: #14110f;
+  --background-secondary-alt: #0d0b09;
+  --background-modifier-hover: #302923;
+  --background-modifier-border: #44382e;
+  --background-modifier-border-hover: #665040;
+  --background-modifier-border-focus: #e67e22;
+  --text-normal: #ede0d4;
+  --text-muted: #b09b88;
+  --text-faint: #7d6a59;
+  --text-accent: #f39c12;
+  --interactive-accent: #e67e22;
+  --interactive-accent-hover: #f39c12;
+  --link-color: #e59866;
+  --h1-color: #f39c12;
+  --h2-color: #e67e22;
+  --h3-color: #d35400;
+  --bold-color: #f5b041;
+  --strong-color: #f5b041;
+  --em-color: #e59866;
+}
+
+body.theme-dark.sk-dark-topaz-nord {
+  --background-primary: #2e3440;
+  --background-primary-alt: #3b4252;
+  --background-secondary: #242933;
+  --background-secondary-alt: #1e222a;
+  --background-modifier-hover: #434c5e;
+  --background-modifier-border: #434c5e;
+  --background-modifier-border-hover: #5e6a82;
+  --background-modifier-border-focus: #88c0d0;
+  --text-normal: #eceff4;
+  --text-muted: #b8c2d1;
+  --text-faint: #7b88a1;
+  --text-accent: #88c0d0;
+  --interactive-accent: #5e81ac;
+  --interactive-accent-hover: #81a1c1;
+  --link-color: #88c0d0;
+  --h1-color: #8fbcbb;
+  --h2-color: #88c0d0;
+  --h3-color: #81a1c1;
+  --bold-color: #ebcb8b;
+  --strong-color: #ebcb8b;
+  --em-color: #b48ead;
+}
+
+body.theme-dark.sk-dark-chocolate {
+  --background-primary: #261c18;
+  --background-primary-alt: #322520;
+  --background-secondary: #1c1411;
+  --background-secondary-alt: #140e0c;
+  --background-modifier-hover: #3d2e27;
+  --background-modifier-border: #4a372f;
+  --background-modifier-border-hover: #694e43;
+  --background-modifier-border-focus: #d49b6a;
+  --text-normal: #ede0d6;
+  --text-muted: #b59d8d;
+  --text-faint: #826b5c;
+  --text-accent: #d49b6a;
+  --interactive-accent: #c47f4d;
+  --interactive-accent-hover: #d49b6a;
+  --link-color: #e0ad82;
+  --h1-color: #e6b88a;
+  --h2-color: #d49b6a;
+  --h3-color: #c47f4d;
+  --bold-color: #e6b88a;
+  --strong-color: #e6b88a;
+  --em-color: #d99b8c;
+}
+
+/* Ensure non-default dark palettes also override 12-sketchbook-global surface locks */
+body.theme-dark:is(
+  .sk-dark-twilight-sunset,
+  .sk-dark-catppuccin-mocha,
+  .sk-dark-rose-pine,
+  .sk-dark-dracula,
+  .sk-dark-tangerine-dunes,
+  .sk-dark-topaz-nord,
+  .sk-dark-chocolate
+) :is(.workspace-leaf-content, .view-content, .markdown-source-view.mod-cm6, .markdown-source-view.mod-cm6 .cm-editor, .markdown-source-view.mod-cm6 .cm-scroller, .markdown-preview-view, .empty-state) {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal);
+}
+
+body.theme-dark:is(
+  .sk-dark-twilight-sunset,
+  .sk-dark-catppuccin-mocha,
+  .sk-dark-rose-pine,
+  .sk-dark-dracula,
+  .sk-dark-tangerine-dunes,
+  .sk-dark-topaz-nord,
+  .sk-dark-chocolate
+) :is(.workspace-split.mod-left-split .workspace-leaf-content, .workspace-split.mod-right-split .workspace-leaf-content, .workspace-tab-header-container, .workspace-ribbon, .status-bar, .view-header) {
+  background-color: var(--background-secondary) !important;
+}
+
+body.theme-dark:is(
+  .sk-dark-twilight-sunset,
+  .sk-dark-catppuccin-mocha,
+  .sk-dark-rose-pine,
+  .sk-dark-dracula,
+  .sk-dark-tangerine-dunes,
+  .sk-dark-topaz-nord,
+  .sk-dark-chocolate
+) .workspace-tab-header.is-active {
+  background-color: var(--background-primary) !important;
+  border-top-color: var(--interactive-accent) !important;
+  color: var(--h1-color) !important;
+}
+
+/* Dashboard .dashboard-v4 palette adaptation for non-default dark palettes */
+body.theme-dark:is(
+  .sk-dark-twilight-sunset,
+  .sk-dark-catppuccin-mocha,
+  .sk-dark-rose-pine,
+  .sk-dark-dracula,
+  .sk-dark-tangerine-dunes,
+  .sk-dark-topaz-nord,
+  .sk-dark-chocolate
+) .markdown-preview-view.dashboard-v4 {
+  --sk-canvas: var(--background-secondary);
+  --sk-paper: var(--background-primary);
+  --sk-paper-raised: var(--background-primary-alt);
+  --sk-vellum: var(--background-primary-alt);
+  --sk-border: var(--background-modifier-border);
+  --sk-border-strong: var(--background-modifier-border-hover);
+  --sk-ink: var(--text-normal);
+  --sk-ink-muted: var(--text-muted);
+  --sk-ink-faint: var(--text-faint);
+  --sk-accent: var(--interactive-accent);
+  --sk-accent-hover: var(--interactive-accent-hover);
+}
+
+/* Light Palettes (AnuPpuccin / Blue Topaz / ITS Theme) */
+body.theme-light.sk-light-catppuccin-latte {
+  --background-primary: #eff1f5;
+  --background-primary-alt: #e6e9ef;
+  --background-secondary: #dce0e8;
+  --background-modifier-border: #ccd0da;
+  --text-normal: #4c4f69;
+  --text-muted: #6c6f85;
+  --interactive-accent: #1e66f5;
+  --link-color: #1e66f5;
+  --h1-color: #d20f39;
+  --h2-color: #fe640b;
+  --h3-color: #8839ef;
+}
+
+body.theme-light.sk-light-everforest {
+  --background-primary: #fdf6e3;
+  --background-primary-alt: #f4f0d9;
+  --background-secondary: #efebd4;
+  --background-modifier-border: #d8d3ba;
+  --text-normal: #5c6a72;
+  --text-muted: #829181;
+  --interactive-accent: #8da101;
+  --link-color: #3a94c5;
+  --h1-color: #8da101;
+  --h2-color: #35a77c;
+  --h3-color: #df69ba;
+}
+
+body.theme-light.sk-light-honey-milk {
+  --background-primary: #fbf5e9;
+  --background-primary-alt: #f2e8d5;
+  --background-secondary: #eadcc4;
+  --background-modifier-border: #d9c5a3;
+  --text-normal: #3d3124;
+  --text-muted: #705e49;
+  --interactive-accent: #d48c2a;
+  --link-color: #b8731a;
+  --h1-color: #a85c12;
+  --h2-color: #c27821;
+  --h3-color: #7d5c36;
+}
+
+body.theme-light.sk-light-school-days {
+  --background-primary: #f7f3e8;
+  --background-primary-alt: #ebe5d5;
+  --background-secondary: #e2dac6;
+  --background-modifier-border: #ccc2aa;
+  --text-normal: #242b33;
+  --text-muted: #576370;
+  --interactive-accent: #2b5b84;
+  --link-color: #2b5b84;
+  --h1-color: #8c2d2d;
+  --h2-color: #2b5b84;
+  --h3-color: #4a6b4e;
+}
+
+body.theme-light:is(
+  .sk-light-catppuccin-latte,
+  .sk-light-everforest,
+  .sk-light-honey-milk,
+  .sk-light-school-days
+) :is(.workspace-leaf-content, .view-content, .markdown-source-view.mod-cm6, .markdown-source-view.mod-cm6 .cm-editor, .markdown-source-view.mod-cm6 .cm-scroller, .markdown-preview-view, .empty-state) {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal);
+}
+
+body.theme-light:is(
+  .sk-light-catppuccin-latte,
+  .sk-light-everforest,
+  .sk-light-honey-milk,
+  .sk-light-school-days
+) :is(.workspace-split.mod-left-split .workspace-leaf-content, .workspace-split.mod-right-split .workspace-leaf-content, .workspace-tab-header-container, .workspace-ribbon, .status-bar, .view-header) {
+  background-color: var(--background-secondary) !important;
+}

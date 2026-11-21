@@ -1,0 +1,11 @@
+{
+  "name": "Twilight Bento",
+  "version": "1.0.0",
+  "minAppVersion": "1.13.0",
+  "author": "night-and-moon",
+  "authorUrl": "https://github.com/night-and-moon",
+  "modes": [
+    "dark",
+    "light"
+  ]
+}
