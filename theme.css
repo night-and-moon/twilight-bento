@@ -3003,6 +3003,8 @@ body.theme-light {
   --tag-background: #e2dcd1;
   --tag-color: #4f4942;
   --code-background: #e4ded3;
+  --text-highlight-bg: rgba(212, 181, 124, 0.38);
+  --text-highlight-bg-active: rgba(168, 66, 36, 0.24);
   --blockquote-border-color: #878077;
   --checkbox-border-color: #878077;
   --checkbox-color: #3d3730;
@@ -3188,6 +3190,8 @@ body.theme-dark {
   --tag-background: #270f0f;
   --tag-color: #c5575b;
   --code-background: #04070c;
+  --text-highlight-bg: rgba(170, 51, 51, 0.34);
+  --text-highlight-bg-active: rgba(197, 87, 91, 0.44);
   --blockquote-border-color: #803232;
   --checkbox-border-color: #577093;
   --checkbox-color: #aa3333;
@@ -3289,6 +3293,21 @@ body.theme-dark .markdown-preview-view h2 {
 body.theme-dark ::selection {
   background: rgba(139, 6, 6, 0.42);
   color: #f4ecec;
+}
+
+/* Crisp Rounded Highlight (==highlight==) for Dark & Light Mode */
+body.theme-dark :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.mod-cm6):not(.dashboard-v4) :is(mark, span.cm-highlight) {
+  background-color: var(--text-highlight-bg);
+  color: #f4ecec;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+body.theme-light :is(.markdown-preview-view, .markdown-rendered, .markdown-source-view.mod-cm6):not(.dashboard-v4) :is(mark, span.cm-highlight) {
+  background-color: var(--text-highlight-bg);
+  color: #1f1c18;
+  padding: 1px 4px;
+  border-radius: 4px;
 }
 
 body.theme-dark button:focus-visible,
@@ -5547,6 +5566,8 @@ body.theme-dark.sk-dark-twilight-sunset {
   --bold-color: #f5bfa0;
   --strong-color: #f5bfa0;
   --em-color: #e09ab0;
+  --text-highlight-bg: rgba(232, 131, 88, 0.28);
+  --text-highlight-bg-active: rgba(232, 131, 88, 0.42);
 }
 
 body.theme-dark.sk-dark-catppuccin-mocha {
@@ -5571,6 +5592,8 @@ body.theme-dark.sk-dark-catppuccin-mocha {
   --bold-color: #fab387;
   --strong-color: #fab387;
   --em-color: #f5c2e7;
+  --text-highlight-bg: rgba(203, 166, 247, 0.26);
+  --text-highlight-bg-active: rgba(203, 166, 247, 0.40);
 }
 
 body.theme-dark.sk-dark-rose-pine {
@@ -5595,6 +5618,8 @@ body.theme-dark.sk-dark-rose-pine {
   --bold-color: #f6c177;
   --strong-color: #f6c177;
   --em-color: #ebbcba;
+  --text-highlight-bg: rgba(235, 188, 186, 0.24);
+  --text-highlight-bg-active: rgba(235, 111, 146, 0.36);
 }
 
 body.theme-dark.sk-dark-dracula {
@@ -5619,6 +5644,8 @@ body.theme-dark.sk-dark-dracula {
   --bold-color: #ffb86c;
   --strong-color: #ffb86c;
   --em-color: #ff79c6;
+  --text-highlight-bg: rgba(189, 147, 249, 0.28);
+  --text-highlight-bg-active: rgba(255, 121, 198, 0.36);
 }
 
 body.theme-dark.sk-dark-tangerine-dunes {
@@ -5643,6 +5670,8 @@ body.theme-dark.sk-dark-tangerine-dunes {
   --bold-color: #f5b041;
   --strong-color: #f5b041;
   --em-color: #e59866;
+  --text-highlight-bg: rgba(230, 126, 34, 0.28);
+  --text-highlight-bg-active: rgba(243, 156, 18, 0.40);
 }
 
 body.theme-dark.sk-dark-topaz-nord {
@@ -5667,6 +5696,8 @@ body.theme-dark.sk-dark-topaz-nord {
   --bold-color: #ebcb8b;
   --strong-color: #ebcb8b;
   --em-color: #b48ead;
+  --text-highlight-bg: rgba(136, 192, 208, 0.24);
+  --text-highlight-bg-active: rgba(136, 192, 208, 0.38);
 }
 
 body.theme-dark.sk-dark-chocolate {
@@ -5691,6 +5722,8 @@ body.theme-dark.sk-dark-chocolate {
   --bold-color: #e6b88a;
   --strong-color: #e6b88a;
   --em-color: #d99b8c;
+  --text-highlight-bg: rgba(212, 155, 106, 0.26);
+  --text-highlight-bg-active: rgba(212, 155, 106, 0.40);
 }
 
 /* Ensure non-default dark palettes also override 12-sketchbook-global surface locks */
